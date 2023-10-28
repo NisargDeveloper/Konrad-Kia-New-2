@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: rgb(134, 103, 103);
+  width: 100%;
+}
+
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.stepsClass {
+  cursor: pointer;
+  display: flex;
+  color: white;
+  flex-direction: row;
+  height: max-content;
+  background-color: black;
+  width: 80%;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.model {
+  background-color: black;
+  width: 33.33%;
+  position: relative;
+}
+
+/* .model::after {
+  content: "asasd";
+  position: absolute;
+  top: 0px;
+  background-color: black;
+  right: 0px;
+  height: 43px;
+  width: 43px;
+} */
+
+.personalization {
+  background-color: yellow;
+  width: 33.33%;
+  color: black;
+  background-color: whitesmoke;
+}
+
+.summary {
+  background-color: black;
+  width: 33.33%;
+}
+
+.heading {
+  left: 0px;
+  text-align: left;
+  background-color: black;
+  color: whitesmoke;
+}

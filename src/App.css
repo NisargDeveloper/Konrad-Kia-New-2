@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+  /* background-color: black; */
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.leftSideHeader {
+  display: flex;
+  z-index: 2;
+  width: 30%;
+  justify-content: space-around;
+}
+.leftSideHeaderBlack {
+  display: flex;
+  z-index: 2;
+  width: 30%;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.logo {
+  z-index: 2;
+}
+
+.rightSideHeader {
+  display: flex;
+  z-index: 2;
+  width: 20%;
+  justify-content: space-around;
+  padding-right: 20px;
+}
+.rightSideHeaderBlack {
+  display: flex;
+  z-index: 2;
+  width: 20%;
+  justify-content: space-around;
+  padding-right: 20px;
+  list-style: none;
+}
+
+.leftSideHeader,
+.rightSideHeader {
+  list-style: none;
+}
+
+.leftSideHeader a,
+.rightSideHeader a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.leftSideHeaderBlack a,
+.rightSideHeaderBlack a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.list a {
+  color: white;
+}
+
+.buildAndPrice {
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+/* Main screen */
+.main {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.imageContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: inset 100px 100px 150px 100px rgba(0, 0, 0, 0.808);
+}
+.image1 {
+  transition: all 240ms ease-in-out;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carName {
+  position: absolute;
+  top: 30vh;
+  font-size: 70px;
+  margin-left: 250px;
+  color: white;
+  z-index: 5;
+}
+
+/* Buttons  */
+
+.buttonClass {
+  height: calc(100vh - 150px);
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttonClass button {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  color: white;
+  font-size: 40px;
+  z-index: 3;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  transition: background-color 100ms ease-in;
+}
+
+.buttonClass button:hover {
+  background-color: rgba(128, 128, 128, 0.821);
+}
