@@ -23,8 +23,8 @@ export default function Header() {
   const logo = isBuildPage ? logoBlack : logoWhite;
   return (
     <header>
-      <nav>
-        <div className="header">
+      <nav className="header">
+     
           <ul className={leftSideHeader}>
             <li>
               <a href="#">Vehicles</a>
@@ -41,7 +41,7 @@ export default function Header() {
           </a>
           <ul className={rightSideHeader}>
             <li>
-              <a href="#">Find a dealer</a>
+              <a href="#" className="findDealer">Find a dealer</a>
             </li>
             <li>
               <Link to="/BuildPage" className="buildAndPrice">
@@ -49,7 +49,7 @@ export default function Header() {
               </Link>
             </li>
           </ul>
-        </div>
+       
       </nav>
     </header>
   );

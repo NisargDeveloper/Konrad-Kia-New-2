@@ -7,15 +7,24 @@
 }
 
 .container {
-  background-color: rgb(134, 103, 103);
-  width: 100%;
-}
-
-.container {
   margin-top: 20px;
   display: flex;
+  color: white;
   flex-direction: row;
   justify-content: center;
+  margin-top: 50px;
+  background-color: #f8f8f8;
+  width: 100%;
+  /* background-color: black; */
+}
+
+.sub-container {
+  width: 80%;
+  font-size: large;
+}
+
+.step-para {
+  text-align: center;
 }
 
 .stepsClass {
@@ -24,43 +33,219 @@
   color: white;
   flex-direction: row;
   height: max-content;
-  background-color: black;
-  width: 80%;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
   list-style: none;
+  align-items: center;
 }
 
-.model {
+.container::before {
+  content: '';
+  position: absolute;
+  left: 0px;
   background-color: black;
+  width: 159px;
+  height: 82px;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  width: 160px;
+  height: 82px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+
+.model {
+  /* background-color: black; */
   width: 33.33%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personalization {
+  width: 33.33%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 
-/* .model::after {
-  content: "asasd";
-  position: absolute;
-  top: 0px;
-  background-color: black;
-  right: 0px;
-  height: 43px;
-  width: 43px;
-} */
-
-.personalization {
-  background-color: yellow;
-  width: 33.33%;
-  color: black;
-  background-color: whitesmoke;
+.model, .personalization, .summary {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 82px;
+  justify-content: center;
 }
 
 .summary {
-  background-color: black;
   width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  color: black;
 }
+
 
 .heading {
   left: 0px;
   text-align: left;
-  background-color: black;
   color: whitesmoke;
 }
+
+.active {
+  background-color: black;
+}
+
+.triangle {
+  border-left: 41px solid transparent;
+  border-right: 43px solid transparent;
+  border-bottom: 43px solid black;
+  position: absolute;
+  transform: rotate(90deg);
+  right: -82px;
+  height: 82px;
+  top: 0px;
+}
+
+/* .triangle-one {
+  border-left: 41px solid transparent;
+  border-right: 43px solid transparent;
+  border-bottom: 43px solid whitesmoke;
+  position: absolute;
+  transform: rotate(90deg);
+  right: -62px;
+  top: 20px;
+} */
+
+
+.triangle-one {
+  top: -8px;
+  right: -29px;
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  transform: rotate(45deg);
+  border-top: 1px solid black;
+  margin-top: 20px;
+  border-right: 1px solid black;
+}
+
+.model-para {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.find-para {
+  font-size: 70px;
+}
+
+.selection-div {
+  background-color: #f8f8f8;
+  padding: 50px 100px;
+}
+
+
+
+
+/* Car Container */
+
+.car-selection {
+  padding: 0px 150px;
+}
+
+.car-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* align-items: ; */
+}
+
+.car-container p {
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.build-btn {
+  margin-top: 15px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  margin-bottom: 12px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  justify-self: center;
+}
+
+.build-btn:hover  {
+  border-bottom: 1px solid black;
+}
+
+.footer-container {
+  padding-left: 150px;
+  padding-top: 60px;
+  background-color: black;
+  height: 500px;
+}
+
+.navigation-container {
+  display: flex;
+}
+
+.navigation-container ul {
+  margin-right: 20px;
+}
+
+.navigation-one li {
+  color: white;
+  list-style: none;
+  cursor: pointer;
+  padding-top: 20px;
+  font-weight: 500;
+  width: 200px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 15px;
+}
+
+.navigation-container li a:hover {
+  border-bottom: 3px solid white;
+}
+
+.navigation-two-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.navigation-two p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.navigation-two p, .navigation-two li {
+ margin-bottom: 10px;
+} 
+
+.navigation-two {
+  color: white;
+  list-style-type: none;
+}
+
