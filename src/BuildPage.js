@@ -12,10 +12,18 @@ import Telluride from './assets/Telluride.png'
 import Stinger from './assets/stinger-side.png'
 import { FaChevronRight } from "react-icons/fa";
 import logo from "./logoWhite.svg";
+import { StepNavbar } from "./StepNavbar";
+import { Link } from "react-router-dom";
 export default function BuildPage() {
-  const [step, setStep] = useState("one");
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
 
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
     const carsInfo = [
       {
         id: 1,
@@ -83,35 +91,10 @@ export default function BuildPage() {
     ];
 
   
-    console.log(carsInfo[0].imageSrc.Ev9)
   return (
     <>
       <div className="container">
-        <div className="sub-container">
-        <ul className="stepsClass">
-          <li className={`model ${step === "one" ? "active": ""}`}>
-            <a>
-              <p className="step-para">Step 1</p>
-              <h3>Select a Model</h3>
-              <span className="triangle"></span>
-            </a>
-          </li>
-          <li className={`personalization ${step === "two" ? "active": ""}`}>
-            <a>
-              <p className="step-para">Step 2</p>
-              <h3>Personalization</h3>
-              <span className="triangle-one"></span>
-            </a>
-          </li>
-          <li className={`summary ${step === "three" ? "active" : ""}`}>
-            <a>
-              <p className="step-para">Step 3</p>
-              <h3>Summary</h3>
-              <span  className="triangle-two"></span>
-            </a>
-          </li>
-        </ul>
-        </div>
+        <StepNavbar/>
       </div>
      
       <div className="selection-div">
@@ -122,15 +105,21 @@ export default function BuildPage() {
       
       <div className="car-selection">
       <h1>Most Popular</h1>
-      <div className="car-container">
-      {carsInfo.map((cars) => (
-        <div className="">
+      <div className='car-container'>
+      {carsInfo.map((cars, index) => (
+         <div
+         key={index}
+         className={`car-build-container ${hoveredIndex === index ? 'hovered' : ''}`}
+         onMouseEnter={() => handleMouseEnter(index)}
+         onMouseLeave={handleMouseLeave}
+       >
           <img src={cars.imageSrc} style={{width:'200px', height: '100px', objectFit:'cover'}}/>
           <p>{cars.modelYear}</p>
           <p>{cars.name}</p>
           <p>Starting at ${cars.price}</p>
           <div className="btn-container">
-          <button className="build-btn">Build</button><FaChevronRight />
+            <Link to="/BuildPage/BuildCar" className="buildAndPrice"></Link>
+          <button className="build-btn" >Build</button><FaChevronRight />
           </div>
 
         </div>
@@ -195,6 +184,13 @@ export default function BuildPage() {
               </ul>
               </div>
             </nav>
+
+            <div className="rights-container">
+              <p>©Kia. All rights reserved</p>
+              <p>Terms and Conditions</p>
+              <p>Privacy Policy</p>
+              <p>First Responder Guide</p>
+            </div>
       </footer>
     </>
   );
