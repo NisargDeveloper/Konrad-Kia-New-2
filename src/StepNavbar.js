@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useState} from 'react';
-export const StepNavbar = () => {
-const [step, setStep] = useState("one");
+export const StepNavbar = ({ stepOne }) => {
+  const [step, setStep] = useState(stepOne);
+  console.log(step);
+  
+  useEffect(() => {
+    // Retrieve the step from localStorage
+    const storedStep = localStorage.getItem("step");
+    console.log("Step in StepNavbar:", storedStep);
+    setStep(storedStep);
+    // Optional: Clear the stored step if needed
+  }, []);
 
-  return (
+return (
     <div className="sub-container">
         <ul className="stepsClass">
           <li className={`model ${step === "one" ? "active": ""}`}>

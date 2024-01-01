@@ -13,17 +13,45 @@ import Stinger from './assets/stinger-side.png'
 import { FaChevronRight } from "react-icons/fa";
 import logo from "./logoWhite.svg";
 import { StepNavbar } from "./StepNavbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function BuildPage() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [step, setStep] = useState("one");
+  console.log(step);
+  const navigate = useNavigate();
+  // const handleMouseEnter = (index) => {
+  //   setHoveredIndex(index);
+  // };
 
-  const handleMouseEnter = (index) => {
-    setHoveredIndex(index);
-  };
+  // const handleBuildButtonClick = (event) => {
+  //   event.preventDefault();
+  //   setStep("two");
+  //   navigate("/BuildPage/BuildCar");
+  // };
+  // console.log(step)
 
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
+  const handleBuildButtonClick = (newStep) => {
+    localStorage.setItem("step", "two");
+    navigate("/BuildPage/BuildCar");
   };
+  
+  // In BuildCar component
+  useEffect(() => {
+    const storedStep = localStorage.getItem("step");
+    if (storedStep) {
+      setStep(storedStep);
+      localStorage.removeItem("step"); // Optional: Clear the stored state
+    }
+  }, []);
+
+
+  useEffect(() => {
+    // This will run after the state is updated
+    console.log("Updated step:", step);
+  }, []);
+  // const handleMouseLeave = () => {
+  //   setHoveredIndex(null);
+  // };
     const carsInfo = [
       {
         id: 1,
@@ -93,10 +121,7 @@ export default function BuildPage() {
   
   return (
     <>
-      <div className="container">
-        <StepNavbar/>
-      </div>
-     
+      <StepNavbar step={step}/>     
       <div className="selection-div">
       <p className="model-para">Select a Model</p>
       <p className="find-para">Find your vehicle</p>
@@ -107,21 +132,21 @@ export default function BuildPage() {
       <h1>Most Popular</h1>
       <div className='car-container'>
       {carsInfo.map((cars, index) => (
+        
+      
          <div
          key={index}
          className={`car-build-container ${hoveredIndex === index ? 'hovered' : ''}`}
-         onMouseEnter={() => handleMouseEnter(index)}
-         onMouseLeave={handleMouseLeave}
-       >
+        //  onMouseEnter={() => handleMouseEnter(index)}
+        //  onMouseLeave={handleMouseLeave}
+         >
           <img src={cars.imageSrc} style={{width:'200px', height: '100px', objectFit:'cover'}}/>
           <p>{cars.modelYear}</p>
           <p>{cars.name}</p>
           <p>Starting at ${cars.price}</p>
           <div className="btn-container">
-            <Link to="/BuildPage/BuildCar" className="buildAndPrice"></Link>
-          <button className="build-btn" >Build</button><FaChevronRight />
+          <button onClick= {handleBuildButtonClick} className="build-btn" >Build</button><FaChevronRight />
           </div>
-
         </div>
       ))}
       </div>
