@@ -4,10 +4,22 @@ import { useState } from 'react'
 import { StepNavbar } from './StepNavbar'
 import { useLocation } from 'react-router-dom'
 import EV9Exterior from './assets/EV9 Exterior.jpg'
+import PantheraColor from './assets/Panthera-metal.jpg'
+import AuroraBlackColor from './assets/Aurora-black-pearl.jpg'
+import PantheraInterior from './assets/Panthera-metal Interior.jpg'
+import SnowWhiteInterior from './assets/Snow-white-pearl Interior.jpg'
+import AuroraInterior from './assets/Aurora-black-pearl Interior.jpg'
+import SeatInterior from './assets/Seat Interior.jpg';
 import './BuildPage.css'
+import { Footer } from "./Footer";
 export const BuildPageSpecific = () => {
   const location = useLocation();
   const isBuildCar = location.pathname.includes("/BuildCar");
+  const [selectedOption, setSelectedOption] = useState("snowWhite");
+
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+  }
 
   const receiveDataFromChild = (data) => {
     console.log(data);
@@ -18,12 +30,13 @@ export const BuildPageSpecific = () => {
     <StepNavbar sendDataToParent={receiveDataFromChild}/>
     <div className='build-container'>
     <div className='img-container'>
-    <img src={EV9Exterior} alt='Internet Picture' />
+    {selectedOption === "panthera" && <img src={PantheraColor}/>}
+    {selectedOption === "aurora" && <img src={AuroraBlackColor}/>}
+    {selectedOption === "snowWhite" && <img src={EV9Exterior}/>}
     </div>
     <div className='kia-div' style={{marginTop: '40px'}}>
       <h1 style={{paddingLeft: '25px', fontSize: '40px'}}>2024 Forte</h1>
-      <h3 style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingLeft: '25px', marginTop: '15px'}}><span style={{border: '1px solid black', borderRadius: '50%', fontSize: '30px', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '10px', fontWeight: '300'}}>1</span>Choose your Trim</h3>
-
+      <h1 style={{display: 'flex', alignItems: 'center',  paddingLeft: '25px', marginTop: '15px'}}><span style={{border: '1px solid black', borderRadius: '50%', fontSize: '30px', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '10px', fontWeight: '300'}}>1</span>Choose your Trim</h1>
       <div>
         <div className='trip-container'>
           <form style={{borderBottom: '1px solid black', paddingBottom: '20px'}}>
@@ -72,8 +85,35 @@ export const BuildPageSpecific = () => {
           </form>
         </div>
       </div>
+      <h1 style={{display: 'flex', alignItems: 'center', paddingLeft: '25px', marginTop: '15px'}}><span style={{border: '1px solid black', borderRadius: '50%', fontSize: '30px', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '10px', fontWeight: '300'}}>2</span>Choose your exterior</h1>
+      <div>
+
+        {selectedOption === 'panthera' && <img src={PantheraInterior} alt='Panthera Interior' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'snowWhite' && <img src={SnowWhiteInterior} alt='SnowWhite Interior' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'aurora' && <img src={AuroraInterior} alt='Aurora Interior' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'panthera' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Panthera Metal</p>}
+        {selectedOption === 'snowWhite' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Snow White Pearl</p>}
+        {selectedOption === 'aurora' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Aurora Black Pearl</p>}
+        <div className='colorSelection'>
+          <button className='white' onClick={() => setSelectedOption("snowWhite")}></button>
+          <button className='metal' onClick={() => setSelectedOption("panthera")}></button>
+          <button className='black' onClick={() => setSelectedOption("aurora")}></button>
+        </div>
+      
+      </div>
+      <h1 style={{display: 'flex', alignItems: 'center', paddingLeft: '25px', marginTop: '15px'}}><span style={{border: '1px solid black', borderRadius: '50%', fontSize: '30px', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '10px', fontWeight: '300'}}>3</span>Choose your Interior</h1>
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '30px', flexDirection: 'column', borderBottom: '1px solid black', paddingBottom: '30px'}}>
+      <img src={SeatInterior} style={{margin: '0px auto'}}/>
+      <p style={{alignSelf: 'flex-start', marginLeft: '30px', fontSize: '30px', marginTop: '10px', marginBottom: '10px'}}>Grey/Black Synth. Leather</p>
+      <button style={{width: '70px', height: '70px', borderRadius: '50%', backgroundColor: 'black', alignSelf: 'flex-start', marginLeft: '30px'}}></button>
+      </div>
+      <div>
+
+      </div>
     </div>
+
     </div>
+    <Footer/>
     </>
   )
 }

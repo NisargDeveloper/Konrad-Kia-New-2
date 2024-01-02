@@ -38,6 +38,8 @@
   justify-content: center;
   list-style: none;
   align-items: center;
+  position: relative;
+  z-index: 3;
 }
 
 .container::before {
@@ -67,6 +69,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  background: white;
 }
 
 .personalization {
@@ -217,7 +221,8 @@
   padding-left: 150px;
   padding-top: 60px;
   background-color: black;
-  height: 500px;
+  height: 531px;
+  padding-bottom: 20px;
 }
 
 .navigation-container {
@@ -281,7 +286,9 @@
 /* This is Build Page Specific */
 
 .build-container {
+  position: relative;
   display: flex;
+  height: 300vh;
 }
 
 /* .img-container {
@@ -292,17 +299,18 @@
 
 .img-container {
   flex-shrink: 0; /* Ensure the image doesn't shrink */
-  width: 300px; /* Adjust the width as needed */
-  position: fixed;
+  width: 1000px; /* Adjust the width as needed */
+  position: sticky;
   top: 0;
   left: 0;
-  height: 100vh; /* Set the height to the viewport height or adjust as needed */
+     /* Set the height to the viewport height or adjust as needed */
   overflow: hidden;
+  height: 100vh;
 }
 
 .img-container img {
   width: 1050px;
-  height: 500px;
+  height: 100vh;
   
   object-fit: cover;
 }
@@ -310,7 +318,9 @@
 /* Build Page specific  */
 
 .kia-div {
-  width: 100%;
+  position: absolute;
+  width: 500px;
+  right: 0;
 }
 
 .trip-container {
@@ -318,7 +328,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 30px; 
-  height: 300vh;
+  height: max-content;
 }
 
 
@@ -371,4 +381,36 @@ input[type='radio']:checked:before {
 
 button {
   width: 100%;
+}
+
+/* Color Selection  */
+
+.colorSelection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 300px;
+  margin-top: 20px;
+
+}
+
+.colorSelection button {
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgba(0, 0, 0, 0.474);
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+.white {
+  background-color: white;
+}
+
+.metal {
+  background-color: rgb(89, 89, 89);
+}
+
+.black {
+  background-color: rgb(14, 14, 14);
 }
