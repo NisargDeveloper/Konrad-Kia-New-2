@@ -284,16 +284,26 @@
   display: flex;
 }
 
-.img-container {
+/* .img-container {
   width: 1050px;
   height: 500px;
   box-sizing: border-box;
+} */
+
+.img-container {
+  flex-shrink: 0; /* Ensure the image doesn't shrink */
+  width: 300px; /* Adjust the width as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Set the height to the viewport height or adjust as needed */
+  overflow: hidden;
 }
 
 .img-container img {
   width: 1050px;
   height: 500px;
-  display: block;
+  
   object-fit: cover;
 }
 
@@ -308,6 +318,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 30px; 
+  height: 300vh;
 }
 
 
@@ -322,7 +333,7 @@
 }
 
 .listOfSpecification li{
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 /* Input customization */
@@ -351,10 +362,13 @@ input[type="radio"] {
   border-radius: 50%;
   outline: none;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 input[type='radio']:checked:before {
   background-color: black;
 }
 
+button {
+  width: 100%;
+}
