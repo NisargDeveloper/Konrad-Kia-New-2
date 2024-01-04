@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import { useState } from 'react'
 import { StepNavbar } from './StepNavbar'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import EV9Exterior from './assets/EV9 Exterior.jpg'
 import PantheraColor from './assets/Panthera-metal.jpg'
 import AuroraBlackColor from './assets/Aurora-black-pearl.jpg'
@@ -16,9 +16,14 @@ export const BuildPageSpecific = () => {
   const location = useLocation();
   const isBuildCar = location.pathname.includes("/BuildCar");
   const [selectedOption, setSelectedOption] = useState("snowWhite");
-
+  const navigate = useNavigate();
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+  }
+
+  const handleSummaryClick = () => {
+    navigate("/Summary");
+    console.log("This is a handle Summary Clicked");
   }
 
   const receiveDataFromChild = (data) => {
@@ -107,11 +112,14 @@ export const BuildPageSpecific = () => {
       <p style={{alignSelf: 'flex-start', marginLeft: '30px', fontSize: '30px', marginTop: '10px', marginBottom: '10px'}}>Grey/Black Synth. Leather</p>
       <button style={{width: '70px', height: '70px', borderRadius: '50%', backgroundColor: 'black', alignSelf: 'flex-start', marginLeft: '30px'}}></button>
       </div>
-      <div>
 
-      </div>
+      <div className='summary-btn-container'>
+      <p>Total $193.38/Weekly Lease</p>
+      <button onClick={handleSummaryClick}><span className='summary-btn'>Next/Summary</span></button>
+      <p>This vehicle could potentially save you ﹩43.46 weekly in fuel. Learn More</p>
     </div>
-
+    </div>
+   
     </div>
     <Footer/>
     </>

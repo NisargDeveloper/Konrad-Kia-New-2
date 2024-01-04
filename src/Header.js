@@ -14,7 +14,7 @@ import {
 
 export default function Header() {
   const location = useLocation();
-  const isBuildPage = location.pathname.includes("/BuildPage");
+  const isBuildPage = location.pathname.includes("/BuildPage") || location.pathname.includes('/Summary');
 
   const leftSideHeader = isBuildPage ? "leftSideHeaderBlack" : "leftSideHeader";
   const rightSideHeader = isBuildPage

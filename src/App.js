@@ -4,6 +4,7 @@ import Main from "./Main";
 import Header from "./Header";
 import BuildPage from "./BuildPage";
 import { BuildPageSpecific } from "./BuildPageSpecific";
+import { SummaryPage } from "./SummaryPage";
 function App() {
   return (
     <Router>
@@ -12,6 +13,7 @@ function App() {
         <Route path="/BuildPage" element={<BuildPage />} />
         <Route path="/" element={<Main />} />
         <Route path="/BuildPage/BuildCar" element={<BuildPageSpecific />} />
+        <Route path="/Summary" element={<SummaryPage/>}/>
       </Routes>
     </Router>
   );

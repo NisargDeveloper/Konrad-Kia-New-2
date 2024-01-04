@@ -20,16 +20,6 @@ export default function BuildPage() {
   const [step, setStep] = useState("one");
   console.log(step);
   const navigate = useNavigate();
-  // const handleMouseEnter = (index) => {
-  //   setHoveredIndex(index);
-  // };
-
-  // const handleBuildButtonClick = (event) => {
-  //   event.preventDefault();
-  //   setStep("two");
-  //   navigate("/BuildPage/BuildCar");
-  // };
-  // console.log(step)
 
   const handleBuildButtonClick = (newStep) => {
     localStorage.setItem("step", "two");
@@ -41,18 +31,15 @@ export default function BuildPage() {
     const storedStep = localStorage.getItem("step");
     if (storedStep) {
       setStep(storedStep);
-      localStorage.removeItem("step"); // Optional: Clear the stored state
+      localStorage.removeItem("step"); 
     }
   }, []);
 
 
   useEffect(() => {
-    // This will run after the state is updated
     console.log("Updated step:", step);
   }, []);
-  // const handleMouseLeave = () => {
-  //   setHoveredIndex(null);
-  // };
+
     const carsInfo = [
       {
         id: 1,
@@ -151,7 +138,6 @@ export default function BuildPage() {
         </div>
       ))}
       </div>
-        
       </div>
         <Footer/>
       

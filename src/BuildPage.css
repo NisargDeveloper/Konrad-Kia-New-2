@@ -288,7 +288,7 @@
 .build-container {
   position: relative;
   display: flex;
-  height: 300vh;
+  height: 250vh;
 }
 
 /* .img-container {
@@ -319,7 +319,7 @@
 
 .kia-div {
   position: absolute;
-  width: 500px;
+  width: 519px;
   right: 0;
 }
 
@@ -413,4 +413,26 @@ button {
 
 .black {
   background-color: rgb(14, 14, 14);
+}
+
+.summary-btn-container {
+  background-color: black;
+  color: white;
+  padding: 40px;
+  bottom: 0;
+  position: sticky;
+  left: 0;
+}
+
+.summary-btn-container p {
+  padding: 10px;
+}
+
+.summary-btn-container button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.summary-btn-container button:hover .summary-btn{
+  border-bottom: 1px solid black;
 }
