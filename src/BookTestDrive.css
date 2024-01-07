@@ -63,3 +63,36 @@
   margin-top: 10px;
   margin-right: 10px;
 }
+
+/* Confirmation Page */
+
+.booking-container {
+  display: flex;
+  margin-top: 50px;
+  
+}
+
+.confirmation-details {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.booking-detail-container {
+  width: 500px;
+}
+
+.booking-detail-container p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.thank-container {
+  background-color: rgba(128, 128, 128, 0.212);
+  padding: 80px;
+}
+
+.thank-container h1 {
+  font-size: 70px;
+  font-weight: 300;
+}

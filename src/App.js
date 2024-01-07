@@ -6,6 +6,7 @@ import BuildPage from "./BuildPage";
 import { BuildPageSpecific } from "./BuildPageSpecific";
 import { SummaryPage } from "./SummaryPage";
 import { BookTestDrive } from "./BookTestDrive";
+import { BookingConfirmation } from "./BookingConfirmation";
 function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/BuildPage/BuildCar" element={<BuildPageSpecific />} />
         <Route path="/Summary" element={<SummaryPage/>}/>
         <Route path="/book-test-drive" element={<BookTestDrive/>}/>
+        <Route path="/BookingConfirmed" element={<BookingConfirmation/>}/>
       </Routes>
     </Router>
   );

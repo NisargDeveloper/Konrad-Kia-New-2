@@ -3,9 +3,10 @@ import axios from 'axios';
 import Header from './Header';
 import EV9 from './assets/ev9-GT.png';
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom'
 import './BookTestDrive.css';
 export const BookTestDrive = () => {
-  
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -49,17 +50,16 @@ export const BookTestDrive = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    
     try {
+      console.log(formData);
       const response = await axios.post('http://localhost:3000/users', formData);
-
+      console.log(response);
+      navigate('/BookingConfirmed', { state: { formData } });
     } catch (error) {
       console.log('Failed to send form data: ', error.message);
     }
   }
-
-
-  
 
   return (
     <div>
