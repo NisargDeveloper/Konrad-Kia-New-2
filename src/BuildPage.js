@@ -14,7 +14,7 @@ import { FaChevronRight } from "react-icons/fa";
 import logo from "./logoWhite.svg";
 import { StepNavbar } from "./StepNavbar";
 import { Link, useNavigate } from "react-router-dom";
-import { Footer } from "./Footer";
+import  Footer from "./Footer";
 export default function BuildPage() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [step, setStep] = useState("one");

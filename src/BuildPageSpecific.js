@@ -11,7 +11,7 @@ import SnowWhiteInterior from './assets/Snow-white-pearl Interior.jpg'
 import AuroraInterior from './assets/Aurora-black-pearl Interior.jpg'
 import SeatInterior from './assets/Seat Interior.jpg';
 import './BuildPage.css'
-import { Footer } from "./Footer";
+import  Footer  from "./Footer";
 export const BuildPageSpecific = () => {
   const location = useLocation();
   const isBuildCar = location.pathname.includes("/BuildCar");
@@ -22,6 +22,7 @@ export const BuildPageSpecific = () => {
   }
 
   const handleSummaryClick = () => {
+    localStorage.setItem("step", "three");
     navigate("/Summary");
     console.log("This is a handle Summary Clicked");
   }

@@ -7,18 +7,26 @@ import { useRef } from 'react';
 import copy from 'copy-to-clipboard';
 import { CiLink } from 'react-icons/ci';
 import { IconContext } from 'react-icons';
+import { useNavigate } from "react-router-dom";
+
 
 export const SummaryPage = () => {
   const [activeCash, setActiveCash] = useState(false);
   const [activeLease, setActiveLease] = useState(false);
   const [activeLoan, setActiveLoan] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
+  const navigate = useNavigate();
 
   const handleSelectChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
   const textRef = useRef();
+
+  const handleTestDriveButton = () => {
+    navigate("/book-test-drive");
+    console.log("This is Test Drive button");
+  }
 
   const handleClick = (paymentType) => {
     setActiveCash(paymentType === 'cash');
@@ -96,7 +104,7 @@ export const SummaryPage = () => {
           <h2>2024 EV9 Light RWD</h2>
           <p>$194.08/Weekly</p>
           <div className="summary-btn">
-            <button>Book a Test Drive</button>
+            <button onClick={handleTestDriveButton}>Book a Test Drive</button>
             <button>Request a Quote</button>
             <button>Apply for Lease</button>
           </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "./logoWhite.svg";
 import "./BuildPage.css";
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="footer-container">
             <img src={logo} alt="Logo White" style={{cursor: 'pointer'}}/>
@@ -69,3 +69,5 @@ export const Footer = () => {
       </footer>
   )
 }
+
+export default Footer; 

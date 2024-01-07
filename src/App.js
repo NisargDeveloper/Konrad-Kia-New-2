@@ -5,6 +5,7 @@ import Header from "./Header";
 import BuildPage from "./BuildPage";
 import { BuildPageSpecific } from "./BuildPageSpecific";
 import { SummaryPage } from "./SummaryPage";
+import { BookTestDrive } from "./BookTestDrive";
 function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/BuildPage/BuildCar" element={<BuildPageSpecific />} />
         <Route path="/Summary" element={<SummaryPage/>}/>
+        <Route path="/book-test-drive" element={<BookTestDrive/>}/>
       </Routes>
     </Router>
   );
