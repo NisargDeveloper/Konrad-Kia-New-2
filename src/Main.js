@@ -22,6 +22,7 @@ export default function Main() {
   return (
     <div className="main">
       <div className="imageContainer">
+        <p style={{color: "white"}}>This is just for testing. Not all functionalities are developed. Please click on Build & Price</p>
         <img
           src={images[currentImageIndex]}
           alt={`Image ${currentImageIndex + 1}`}

@@ -124,7 +124,7 @@ export const BookTestDrive = () => {
         
         <button type="submit"style={{padding: '15px', backgroundColor: 'black', color: 'white', cursor: 
       'pointer', marginTop: '20px', marginBottom: '20px', width: '100px'}}>Submit</button>
-        <button style={{padding: '15px', color: 'black', cursor: 'pointer', marginTop: '20px', marginBottom: '20px', border: '1px solid black', width:'100px'}}>Back</button>
+        
       </form>
       <Footer/>
     </div>

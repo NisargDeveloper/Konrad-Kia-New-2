@@ -69,11 +69,9 @@
 .booking-container {
   display: flex;
   margin-top: 50px;
-  
 }
 
 .confirmation-details {
-  
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }

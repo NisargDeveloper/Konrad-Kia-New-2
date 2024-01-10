@@ -45,7 +45,9 @@ export const SummaryPage = () => {
 
   return (
     <div>
+      <p style={{color: "white", background: "black", textAlign: 'center'}}>This is just for testing. Not all functionalities are developed. Please click on Book a Test Drive</p>
       <StepNavbar />
+      
       <div className="summary-container">
         <div>
           <div className="image-background">
@@ -103,7 +105,7 @@ export const SummaryPage = () => {
         <div className="checkout-container">
           <h2>2024 EV9 Light RWD</h2>
           <p>$194.08/Weekly</p>
-          <div className="summary-btn">
+          <div className="action-btn">
             <button onClick={handleTestDriveButton}>Book a Test Drive</button>
             <button>Request a Quote</button>
             <button>Apply for Lease</button>

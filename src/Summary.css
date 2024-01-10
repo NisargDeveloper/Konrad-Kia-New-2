@@ -39,6 +39,14 @@
   object-fit: cover;
 }
 
+.action-btn {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .checkout-container {
   width: 600px;
   border: 1px solid rgba(0, 0, 0, 0.453);
@@ -122,5 +130,4 @@
   width: 100%;
   padding: 20px 0px;
   font-size: 18px;
-  
 }

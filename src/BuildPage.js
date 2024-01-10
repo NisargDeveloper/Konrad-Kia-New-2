@@ -109,7 +109,9 @@ export default function BuildPage() {
   
   return (
     <>
+    <p style={{color: "white", background: "black", textAlign: "center"}}>This is just for a testing. Not all functionalities are developed. Please click on Build</p>
       <StepNavbar step={step}/>     
+      
       <div className="selection-div">
       <p className="model-para">Select a Model</p>
       <p className="find-para">Find your vehicle</p>

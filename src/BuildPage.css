@@ -416,6 +416,11 @@ button {
   background-color: rgb(14, 14, 14);
 }
 
+.summary-btn {
+  margin-top: 30px;
+}
+
+
 .summary-btn-container {
   background-color: black;
   color: white;
