@@ -1,18 +1,34 @@
 {
   "files": {
-    "main.css": "/Konrad-Kia-New-2/static/css/main.394dcfa1.css",
-    "main.js": "/Konrad-Kia-New-2/static/js/main.fc594ce8.js",
-    "static/media/Kia-Forte.jpg": "/Konrad-Kia-New-2/static/media/Kia-Forte.c5e5768c67fc0d3cf070.jpg",
-    "static/media/Kia-EV9.jpg": "/Konrad-Kia-New-2/static/media/Kia-EV9.e915308c04e39692bd47.jpg",
-    "static/media/Niro-EV.jpg": "/Konrad-Kia-New-2/static/media/Niro-EV.044d44baea0721431b9e.jpg",
-    "static/media/logoBlack.svg": "/Konrad-Kia-New-2/static/media/logoBlack.2617ffdffd0cb3025d4256802be5bc04.svg",
-    "static/media/logoWhite.svg": "/Konrad-Kia-New-2/static/media/logoWhite.b80ec3913690dd5826f47a8c6fed5ef3.svg",
-    "index.html": "/Konrad-Kia-New-2/index.html",
-    "main.394dcfa1.css.map": "/Konrad-Kia-New-2/static/css/main.394dcfa1.css.map",
-    "main.fc594ce8.js.map": "/Konrad-Kia-New-2/static/js/main.fc594ce8.js.map"
+    "main.css": "/static/css/main.82e36471.css",
+    "main.js": "/static/js/main.35c49cc0.js",
+    "static/media/Kia-Forte.jpg": "/static/media/Kia-Forte.c5e5768c67fc0d3cf070.jpg",
+    "static/media/Kia-EV9.jpg": "/static/media/Kia-EV9.e915308c04e39692bd47.jpg",
+    "static/media/Niro-EV.jpg": "/static/media/Niro-EV.044d44baea0721431b9e.jpg",
+    "static/media/EV9 Exterior.jpg": "/static/media/EV9 Exterior.81c07b0dad367d249d1f.jpg",
+    "static/media/Panthera-metal.jpg": "/static/media/Panthera-metal.62b1bcb3635d5cd8cfcc.jpg",
+    "static/media/Aurora-black-pearl.jpg": "/static/media/Aurora-black-pearl.8c884771f1245a4f54e8.jpg",
+    "static/media/Telluride.png": "/static/media/Telluride.9266ce44ed0f2138f343.png",
+    "static/media/sportage.png": "/static/media/sportage.62cce33a410b0684669e.png",
+    "static/media/sorento.png": "/static/media/sorento.19b6623ce5a054514a72.png",
+    "static/media/carnival.png": "/static/media/carnival.e9eb6b28ff4394f0fa28.png",
+    "static/media/seltos.png": "/static/media/seltos.08c4f6b7334dcf7e997c.png",
+    "static/media/niro-ev.png": "/static/media/niro-ev.645d5060310fb2b8c96b.png",
+    "static/media/stinger-side.png": "/static/media/stinger-side.77e25e1b807893dbd3a6.png",
+    "static/media/ev9-GT.png": "/static/media/ev9-GT.c58141d811c5dc7b20b5.png",
+    "static/media/forte.png": "/static/media/forte.08c7f3972a9c66458689.png",
+    "static/media/Panthera-metal Interior.jpg": "/static/media/Panthera-metal Interior.cfdd942108c4971d4821.jpg",
+    "static/media/Seat Interior.jpg": "/static/media/Seat Interior.75dbb58ad5a3bb1cdae6.jpg",
+    "static/media/Snow-white-pearl Interior.jpg": "/static/media/Snow-white-pearl Interior.479672805963abcdd08c.jpg",
+    "static/media/Aurora-black-pearl Interior.jpg": "/static/media/Aurora-black-pearl Interior.27b275db054e2142111c.jpg",
+    "static/media/logoBlack.svg": "/static/media/logoBlack.2617ffdffd0cb3025d4256802be5bc04.svg",
+    "static/media/logoWhite.svg": "/static/media/logoWhite.b80ec3913690dd5826f47a8c6fed5ef3.svg",
+    "index.html": "/index.html",
+    "main.82e36471.css.map": "/static/css/main.82e36471.css.map",
+    "main.35c49cc0.js.map": "/static/js/main.35c49cc0.js.map"
   },
   "entrypoints": [
-    "static/css/main.394dcfa1.css",
-    "static/js/main.fc594ce8.js"
+    "static/css/main.82e36471.css",
+    "static/js/main.35c49cc0.js"
   ]
 }

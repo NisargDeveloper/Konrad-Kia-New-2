@@ -115,7 +115,7 @@ export const SummaryPage = () => {
           <h2 className="printSummaryHeading">Print Summary</h2>
           <div style={{ marginTop: '20px' }}>
             <h2>Share with Friends and Family</h2>
-            <p>
+            <p style={{marginTop: '10px'}}>
               Copy and Paste this link to any messaging app or email to share your 2024 EV9 Light RWD
             </p>
             <div style={{ display: 'flex' }}>
@@ -125,9 +125,10 @@ export const SummaryPage = () => {
                 type="text"
                 ref={textRef}
                 className="inputField"
+                style={{marginTop: '10px'}}
               />
 
-              <button onClick={copyToClipboard} className="copy-btn">
+              <button onClick={copyToClipboard} className="copy-btn" style={{marginTop: '10px'}}>
                 <IconContext.Provider
                   value={{ size: '2em', style: { verticalAlign: 'middle' }, width: '20px' }}
                 >
