@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './Header'
 import { useState } from 'react'
 import { StepNavbar } from './StepNavbar'
@@ -10,13 +10,48 @@ import PantheraInterior from './assets/Panthera-metal Interior.jpg'
 import SnowWhiteInterior from './assets/Snow-white-pearl Interior.jpg'
 import AuroraInterior from './assets/Aurora-black-pearl Interior.jpg'
 import SeatInterior from './assets/Seat Interior.jpg';
+import ForteInterior from './assets/aurora-black.jpg';
+import SeltosInterior from './assets/Seltos-two.jpg';
+import SportageTwo from './assets/dawning-red.jpg';
+import SorentoTwo from './assets/Ebony-Black.jpg';
+import CarnivalTwo from './assets/Carnival.jpg';
+import NiroEvTwo from './assets/Niro Ev two.jpg';
+import TellurideTwo from './assets/Telluride.jpg';
+import StingerTwo from './assets/Stinger.jpg';
 import './BuildPage.css'
 import  Footer  from "./Footer";
 export const BuildPageSpecific = () => {
   const location = useLocation();
   const isBuildCar = location.pathname.includes("/BuildCar");
+  const [imageSource, setImageSource] = useState('');
+  const cars = location.state;
   const [selectedOption, setSelectedOption] = useState("snowWhite");
   const navigate = useNavigate();
+  console.log(cars.name)
+
+  useEffect(() => {
+    if(cars.name === 'Forte') {
+      setImageSource(ForteInterior)
+    } else if(cars.name === 'Seltos'){
+      setImageSource(SeltosInterior);
+    } else if(cars.name === 'Sportage') {
+      setImageSource(SportageTwo);
+    } else if(cars.name === 'Sorento') {
+      setImageSource(SorentoTwo);
+    } else if(cars.name === 'Carnival') {
+      setImageSource(CarnivalTwo);
+    }else if(cars.name === 'Niro Ev') {
+      setImageSource(NiroEvTwo);
+    }else if(cars.name === 'Telluride') {
+      setImageSource(TellurideTwo);
+    }else if(cars.name === 'Stinger') {
+      setImageSource(StingerTwo);
+    }else if(cars.name === 'EV9') {
+      setImageSource(EV9Exterior);
+    }
+  }, [cars])
+
+
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   }
@@ -38,10 +73,10 @@ export const BuildPageSpecific = () => {
     <div className='img-container'>
     {selectedOption === "panthera" && <img src={PantheraColor}/>}
     {selectedOption === "aurora" && <img src={AuroraBlackColor}/>}
-    {selectedOption === "snowWhite" && <img src={EV9Exterior}/>}
+    {selectedOption === "snowWhite" && <img src={imageSource}/>}
     </div>
     <div className='kia-div' style={{marginTop: '40px'}}>
-      <h1 style={{paddingLeft: '25px', fontSize: '40px'}}>2024 Forte</h1>
+      <h1 style={{paddingLeft: '25px', fontSize: '40px'}}>{cars.name}</h1>
       <h1 style={{display: 'flex', alignItems: 'center',  paddingLeft: '25px', marginTop: '15px'}}><span style={{border: '1px solid black', borderRadius: '50%', fontSize: '30px', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '10px', fontWeight: '300'}}>1</span>Choose your Trim</h1>
       <div>
         <div className='trip-container'>
@@ -93,7 +128,6 @@ export const BuildPageSpecific = () => {
       </div>
       <h1 style={{display: 'flex', alignItems: 'center', paddingLeft: '25px', marginTop: '15px'}}><span style={{border: '1px solid black', borderRadius: '50%', fontSize: '30px', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '10px', fontWeight: '300'}}>2</span>Choose your exterior</h1>
       <div>
-
         {selectedOption === 'panthera' && <img src={PantheraInterior} alt='Panthera Interior' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
         {selectedOption === 'snowWhite' && <img src={SnowWhiteInterior} alt='SnowWhite Interior' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
         {selectedOption === 'aurora' && <img src={AuroraInterior} alt='Aurora Interior' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
@@ -105,7 +139,6 @@ export const BuildPageSpecific = () => {
           <button className='metal' onClick={() => setSelectedOption("panthera")}></button>
           <button className='black' onClick={() => setSelectedOption("aurora")}></button>
         </div>
-      
       </div>
       <h1 style={{display: 'flex', alignItems: 'center', paddingLeft: '25px', marginTop: '15px'}}><span style={{border: '1px solid black', borderRadius: '50%', fontSize: '30px', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '10px', fontWeight: '300'}}>3</span>Choose your Interior</h1>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '30px', flexDirection: 'column', borderBottom: '1px solid black', paddingBottom: '30px'}}>

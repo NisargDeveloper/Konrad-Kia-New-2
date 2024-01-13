@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.82e36471.css",
-    "main.js": "/static/js/main.35c49cc0.js",
+    "main.js": "/static/js/main.eb8199b3.js",
     "static/media/Kia-Forte.jpg": "/static/media/Kia-Forte.c5e5768c67fc0d3cf070.jpg",
     "static/media/Kia-EV9.jpg": "/static/media/Kia-EV9.e915308c04e39692bd47.jpg",
     "static/media/Niro-EV.jpg": "/static/media/Niro-EV.044d44baea0721431b9e.jpg",
@@ -25,10 +25,10 @@
     "static/media/logoWhite.svg": "/static/media/logoWhite.b80ec3913690dd5826f47a8c6fed5ef3.svg",
     "index.html": "/index.html",
     "main.82e36471.css.map": "/static/css/main.82e36471.css.map",
-    "main.35c49cc0.js.map": "/static/js/main.35c49cc0.js.map"
+    "main.eb8199b3.js.map": "/static/js/main.eb8199b3.js.map"
   },
   "entrypoints": [
     "static/css/main.82e36471.css",
-    "static/js/main.35c49cc0.js"
+    "static/js/main.eb8199b3.js"
   ]
 }

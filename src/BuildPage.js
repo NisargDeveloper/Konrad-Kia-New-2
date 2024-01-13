@@ -21,19 +21,20 @@ export default function BuildPage() {
   console.log(step);
   const navigate = useNavigate();
 
-  const handleBuildButtonClick = (newStep) => {
-    localStorage.setItem("step", "two");
-    navigate("/BuildPage/BuildCar");
+  const handleBuildButtonClick = (cars) => {
+    console.log("Button clicked")
+    console.log(cars)
+    navigate("/BuildPage/BuildCar", { state: cars});
   };
   
   // In BuildCar component
-  useEffect(() => {
-    const storedStep = localStorage.getItem("step");
-    if (storedStep) {
-      setStep(storedStep);
-      localStorage.removeItem("step"); 
-    }
-  }, []);
+  // useEffect(() => {
+  //   const storedStep = localStorage.getItem("step");
+  //   if (storedStep) {
+  //     setStep(storedStep);
+  //     localStorage.removeItem("step"); 
+  //   }
+  // }, []);
 
 
   useEffect(() => {
@@ -135,7 +136,7 @@ export default function BuildPage() {
           <p>{cars.name}</p>
           <p>Starting at ${cars.price}</p>
           <div className="btn-container">
-          <button onClick= {handleBuildButtonClick} className="build-btn" >Build</button><FaChevronRight />
+          <button onClick= {() => handleBuildButtonClick(cars)} className="build-btn" >Build</button><FaChevronRight />
           </div>
         </div>
       ))}
