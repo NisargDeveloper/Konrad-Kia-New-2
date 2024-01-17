@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "konrad-cd83d"
-  }
+    "default": "konrad-cd83d",
+    "main": "konrad-cd83d"
+  },
+  "targets": {}
 }

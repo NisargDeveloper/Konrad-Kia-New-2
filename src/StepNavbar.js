@@ -1,17 +1,31 @@
 import React, { useEffect } from 'react'
 import {useState} from 'react';
-export const StepNavbar = ({ stepOne }) => {
-  const [step, setStep] = useState(stepOne);
+import { useLocation } from 'react-router-dom';
+export const StepNavbar = ({  }) => {
+  const [step, setStep] = useState('');
   console.log(step);
   
-  useEffect(() => {
-    // Retrieve the step from localStorage
-    const storedStep = localStorage.getItem("step");
-    console.log("Step in StepNavbar:", storedStep);
-    setStep(storedStep);
-    // Optional: Clear the stored step if needed
-  }, []);
+  const location = useLocation();
+  const stepOne = location.pathname.includes("/BuildPage");
+  const stepTwo = location.pathname.includes("/BuildPage/BuildCar")
+  const stepThree = location.pathname.includes("/Summary")
 
+  useEffect(() => {
+    if(stepOne && !stepTwo) {
+      console.log("Inside step one");
+      setStep("one");
+    } else if(stepTwo) {
+      console.log("Inside step two");
+      setStep("two");
+    } else {
+      console.log("Inside step three");
+
+      setStep("three");
+    }
+    }
+  , []);
+
+  
 return (
     <div className="sub-container">
         <ul className="stepsClass">

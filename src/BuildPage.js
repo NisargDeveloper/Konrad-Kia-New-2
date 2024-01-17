@@ -28,13 +28,13 @@ export default function BuildPage() {
   };
   
   // In BuildCar component
-  // useEffect(() => {
-  //   const storedStep = localStorage.getItem("step");
-  //   if (storedStep) {
-  //     setStep(storedStep);
-  //     localStorage.removeItem("step"); 
-  //   }
-  // }, []);
+  useEffect(() => {
+    const storedStep = localStorage.getItem("step");
+    if (storedStep) {
+      setStep(storedStep);
+      localStorage.removeItem("step"); 
+    }
+  }, []);
 
 
   useEffect(() => {
