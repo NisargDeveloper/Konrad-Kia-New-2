@@ -24,18 +24,19 @@ function App() {
   }, []);
 
   return (
+    <>
     <Router>
-      
+    <Header />
       {isMobile ? (
         <div style={{display: "flex", justifyContent: "center", alignItems: "center", width: '100', height: '100vh',
         marginTop: '0px',
         textAlign: "center"
         }}>
-          <h1>Mobile Version is not developed yet. Check in Desktop</h1>
+          <h1>Mobile Version is not developed yet. Check in a Desktop</h1>
         </div>
       ) : (
-      <Routes>
-        <Header />
+        <Routes>
+        
         <Route path="/BuildPage" element={<BuildPage />} />
         <Route path="/" element={<Main />} />
         <Route path="/BuildPage/BuildCar" element={<BuildPageSpecific />} />
@@ -45,7 +46,9 @@ function App() {
       </Routes>
       )}
     </Router>
+    </>
   );
+ 
 }
 
 export default App;

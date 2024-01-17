@@ -1,13 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.82e36471.css",
-    "main.js": "/static/js/main.eb8199b3.js",
+    "main.js": "/static/js/main.37109b79.js",
     "static/media/Kia-Forte.jpg": "/static/media/Kia-Forte.c5e5768c67fc0d3cf070.jpg",
     "static/media/Kia-EV9.jpg": "/static/media/Kia-EV9.e915308c04e39692bd47.jpg",
     "static/media/Niro-EV.jpg": "/static/media/Niro-EV.044d44baea0721431b9e.jpg",
+    "static/media/dawning-red.jpg": "/static/media/dawning-red.796764a0532cc3e02945.jpg",
+    "static/media/aurora-black.jpg": "/static/media/aurora-black.c0ca7a0152b23a1ec0cf.jpg",
+    "static/media/Seltos-two.jpg": "/static/media/Seltos-two.6ce095a4744e48715e4e.jpg",
+    "static/media/Niro Ev two.jpg": "/static/media/Niro Ev two.17aa7fc584dc3384c919.jpg",
+    "static/media/Carnival.jpg": "/static/media/Carnival.7d428aa14989df8c1183.jpg",
+    "static/media/Ebony-Black.jpg": "/static/media/Ebony-Black.11398417e27cb072bedb.jpg",
     "static/media/EV9 Exterior.jpg": "/static/media/EV9 Exterior.81c07b0dad367d249d1f.jpg",
     "static/media/Panthera-metal.jpg": "/static/media/Panthera-metal.62b1bcb3635d5cd8cfcc.jpg",
     "static/media/Aurora-black-pearl.jpg": "/static/media/Aurora-black-pearl.8c884771f1245a4f54e8.jpg",
+    "static/media/Stinger.jpg": "/static/media/Stinger.0e4ad98e09d23158afa5.jpg",
+    "static/media/Telluride.jpg": "/static/media/Telluride.acf00aad61d3f38bf5f4.jpg",
     "static/media/Telluride.png": "/static/media/Telluride.9266ce44ed0f2138f343.png",
     "static/media/sportage.png": "/static/media/sportage.62cce33a410b0684669e.png",
     "static/media/sorento.png": "/static/media/sorento.19b6623ce5a054514a72.png",
@@ -25,10 +33,10 @@
     "static/media/logoWhite.svg": "/static/media/logoWhite.b80ec3913690dd5826f47a8c6fed5ef3.svg",
     "index.html": "/index.html",
     "main.82e36471.css.map": "/static/css/main.82e36471.css.map",
-    "main.eb8199b3.js.map": "/static/js/main.eb8199b3.js.map"
+    "main.37109b79.js.map": "/static/js/main.37109b79.js.map"
   },
   "entrypoints": [
     "static/css/main.82e36471.css",
-    "static/js/main.eb8199b3.js"
+    "static/js/main.37109b79.js"
   ]
 }
