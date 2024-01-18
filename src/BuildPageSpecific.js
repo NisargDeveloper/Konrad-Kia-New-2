@@ -26,22 +26,17 @@ export const BuildPageSpecific = () => {
   const [imageSource, setImageSource] = useState('');
   const cars = location.state;
   const [selectedOption, setSelectedOption] = useState("snowWhite");
+  const [carsColorLength, setCarsColorLength] = useState('0');
   const navigate = useNavigate();
   console.log(cars.name)
-
-  
-
+  console.log("This is the car state"+ cars.color);
+  console.log("The selected Name is " + selectedOption);
   useEffect(() => {
     if(cars.name === 'Forte') {
       setImageSource(ForteInterior)
-    } else if(cars.name === 'Seltos' && selectedOption === "snowWhite"){
+    } else if(cars.name === 'Seltos'){
       setImageSource(SeltosInterior);
-    }
-    else if(cars.name === 'Seltos' && selectedOption === "fusionBlack"){
-      setImageSource(FusionBlack);
-    } 
-    else if(cars.name === 'Seltos' && selectedOption === "snowWhite"){
-      setImageSource(SeltosInterior);
+      setCarsColorLength(cars.color.length);
     }
      else if(cars.name === 'Sportage') {
       setImageSource(SportageTwo);
@@ -61,9 +56,6 @@ export const BuildPageSpecific = () => {
   }, [cars])
 
 
-  const handleOptionClick = (option) => {
-    setSelectedOption(option);
-  }
 
   const handleSummaryClick = () => {
     localStorage.setItem("step", "three");
@@ -141,12 +133,22 @@ export const BuildPageSpecific = () => {
         {selectedOption === 'snowWhite' && <img src={SnowWhiteInterior} alt='SnowWhite Interior' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
         {selectedOption === 'aurora' && <img src={AuroraInterior} alt='Aurora Interior' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
         {selectedOption === 'panthera' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Panthera Metal</p>}
-        {selectedOption === 'snowWhite' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Snow White Pearl</p>}
-        {selectedOption === 'aurora' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Aurora Black Pearl</p>}
+        {selectedOption === 'steel grey' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Steel Grey</p>}
+        {selectedOption === 'gravity grey' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Gravity Grey</p>}
+        {selectedOption === "fusion black" && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Fusion Black</p>}
+        {selectedOption === "snow white pearl" && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Snow White Pearl</p>}
+        {selectedOption === "neptune blue" && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Neptune Blue</p>}
+        {selectedOption === "lunar orange" && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Lunar Orange</p>}
+        {selectedOption === "valais green" && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Valais Green</p>}
+        {selectedOption === "dark ocean blue" && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Dark Ocean Blue</p>}
+        {selectedOption === "pluton blue" && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Pluton Blue</p>}
         <div className='colorSelection'>
-          <button className='white' onClick={() => setSelectedOption("snowWhite")}></button>
+        {cars.color.map((color, index) => (
+            <button className = {color.name} key={index} onClick={ () => setSelectedOption(color.name)}></button>
+          ))}
+          {/* <button className='white' onClick={() => setSelectedOption("snowWhite")}></button>
           <button className='metal' onClick={() => setSelectedOption("panthera")}></button>
-          <button className='black' onClick={() => setSelectedOption("aurora")}></button>
+          <button className='black' onClick={() => setSelectedOption("aurora")}></button> */}
         </div>
       </div>
       <h1 style={{display: 'flex', alignItems: 'center', paddingLeft: '25px', marginTop: '15px'}}><span style={{border: '1px solid black', borderRadius: '50%', fontSize: '30px', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '10px', fontWeight: '300'}}>3</span>Choose your Interior</h1>

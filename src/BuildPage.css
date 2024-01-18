@@ -389,10 +389,12 @@ button {
 .colorSelection {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 300px;
+  justify-content: space-between;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
   margin-top: 20px;
-
+  padding: 0px 50px;
 }
 
 .colorSelection button {
@@ -401,7 +403,8 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.474);
   border-radius: 50%;
   cursor: pointer;
-
+  margin-right: 40px;
+  margin-top: 15px;
 }
 
 .white {
@@ -441,4 +444,42 @@ button {
 
 .summary-btn-container button:hover .summary-btn{
   border-bottom: 1px solid black;
+}
+
+/* Button Color CSS */
+
+.snow{
+  background-color: rgb(255, 255, 255);
+}
+.fusion{
+  background-color: rgb(32, 32, 32);
+
+}
+.steel {
+  background-color: rgb(173, 176, 179);
+
+}
+.gravity{
+  background-color: rgb(86, 94, 107) ;
+
+}
+.neptune{
+  background-color: rgb(46, 70, 196);
+
+}
+.lunar {
+  background-color: rgb(159, 67, 57);
+
+}
+.valais {
+  background-color: rgb(164, 139, 47);
+
+}
+.ocean{
+  background-color:rgb(59, 68, 83) ;
+
+}
+.pluton {
+  background-color:rgb(81, 115, 124) ;
+
 }

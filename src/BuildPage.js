@@ -9,9 +9,13 @@ import Sorento from './assets/sorento.png'
 import Carnival from './assets/carnival.png'
 import Niro from './assets/niro-ev.png'
 import Telluride from './assets/Telluride.png'
-import Stinger from './assets/stinger-side.png'
+import Stinger from './assets/stinger-side.png';
+
+import DarkOceanSeltos from './assets/2024 Seltos/colors/Dark-Ocean-Blue.jpg';
+import DarkOceanSeltosSample from './assets/2024 Seltos/color-sample/ocean-dark-blue.jpg';
+
+
 import { FaChevronRight } from "react-icons/fa";
-import logo from "./logoWhite.svg";
 import { StepNavbar } from "./StepNavbar";
 import { Link, useNavigate } from "react-router-dom";
 import  Footer from "./Footer";
@@ -88,6 +92,8 @@ export default function BuildPage() {
           },
           {
             name: 'dark ocean blue',
+            imageSrc: DarkOceanSeltos,
+            colorSample: DarkOceanSeltosSample,
           },
           {
             name: 'pluton blue',
@@ -148,14 +154,11 @@ export default function BuildPage() {
       <p className="model-para">Select a Model</p>
       <p className="find-para">Find your vehicle</p>
       </div>
-
       
       <div className="car-selection">
       <h1>Most Popular</h1>
       <div className='car-container'>
       {carsInfo.map((cars, index) => (
-        
-      
          <div
          key={index}
          className={`car-build-container ${hoveredIndex === index ? 'hovered' : ''}`}
