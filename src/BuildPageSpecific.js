@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Header from './Header'
 import { useState } from 'react'
 import { StepNavbar } from './StepNavbar'
 import { useLocation, useNavigate } from 'react-router-dom'
@@ -12,6 +11,7 @@ import AuroraInterior from './assets/Aurora-black-pearl Interior.jpg'
 import SeatInterior from './assets/Seat Interior.jpg';
 import ForteInterior from './assets/aurora-black.jpg';
 import SeltosInterior from './assets/Seltos-two.jpg';
+import FusionBlack from './assets/2024 Seltos/colors/Fusion-Black.jpg';
 import SportageTwo from './assets/dawning-red.jpg';
 import SorentoTwo from './assets/Ebony-Black.jpg';
 import CarnivalTwo from './assets/Carnival.jpg';
@@ -29,12 +29,21 @@ export const BuildPageSpecific = () => {
   const navigate = useNavigate();
   console.log(cars.name)
 
+  
+
   useEffect(() => {
     if(cars.name === 'Forte') {
       setImageSource(ForteInterior)
-    } else if(cars.name === 'Seltos'){
+    } else if(cars.name === 'Seltos' && selectedOption === "snowWhite"){
       setImageSource(SeltosInterior);
-    } else if(cars.name === 'Sportage') {
+    }
+    else if(cars.name === 'Seltos' && selectedOption === "fusionBlack"){
+      setImageSource(FusionBlack);
+    } 
+    else if(cars.name === 'Seltos' && selectedOption === "snowWhite"){
+      setImageSource(SeltosInterior);
+    }
+     else if(cars.name === 'Sportage') {
       setImageSource(SportageTwo);
     } else if(cars.name === 'Sorento') {
       setImageSource(SorentoTwo);
@@ -73,7 +82,7 @@ export const BuildPageSpecific = () => {
     <div className='img-container'>
     {selectedOption === "panthera" && <img src={PantheraColor}/>}
     {selectedOption === "aurora" && <img src={AuroraBlackColor}/>}
-    {selectedOption === "snowWhite" && <img src={imageSource}/>}
+    {selectedOption === "snowWhite" && <img src={imageSource} />}
     </div>
     <div className='kia-div' style={{marginTop: '40px'}}>
       <h1 style={{paddingLeft: '25px', fontSize: '40px'}}>{cars.name}</h1>
@@ -81,7 +90,7 @@ export const BuildPageSpecific = () => {
       <div>
         <div className='trip-container'>
           <form style={{borderBottom: '1px solid black', paddingBottom: '20px'}}>
-          <button>
+          <button type='button' style={{cursor: 'pointer'}}>
             <div style={{display: 'flex', justifyContent: 'space-around', flexDirection: 'column', padding: '27px'}}>
               <label for="baseTrim" style={{display: 'flex'}}>
               <input id='baseTrim' type='radio' className='input-trip' name='trimType'/>
@@ -101,7 +110,7 @@ export const BuildPageSpecific = () => {
               </ul>
             </div>
           </button>
-          <button>
+          <button type='button' style={{cursor: 'pointer'}}>
             <div style={{display: 'flex', justifyContent: 'space-around' , padding: '27px', flexDirection: 'column'}}>
             <label for="baseTrim2" style={{display: 'flex'}}>
             <input id='baseTrim2' type='radio' className='input-trip' name='trimType'/>
@@ -112,7 +121,7 @@ export const BuildPageSpecific = () => {
               </label>
             </div>
           </button>
-          <button>
+          <button type='button' style={{cursor: 'pointer'}}>
             <div style={{display: 'flex', justifyContent: 'space-around' , padding: '27px', flexDirection: 'column'}}>
             <label for="baseTrim" style={{display: 'flex'}}>
             <input id='baseTrim' type='radio' className='input-trip' name='trimType'/>

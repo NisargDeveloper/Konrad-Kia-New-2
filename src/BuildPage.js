@@ -62,6 +62,37 @@ export default function BuildPage() {
         modelYear: 2024,
         name: 'Seltos',
         price: 27835,
+        color: [
+          {
+            name: 'snow white pearl',
+            carImage: "",
+            sample: ""
+          },
+          {
+            name: 'fusion black',
+          },
+          {
+            name: 'steel grey',
+          },
+          {
+            name: 'gravity grey',
+          },
+          {
+            name: 'neptune blue',
+          },
+          {
+            name: 'lunar orange',
+          },
+          {
+            name: 'valais green',
+          },
+          {
+            name: 'dark ocean blue',
+          },
+          {
+            name: 'pluton blue',
+          }
+        ]
       },
       {
         id: 4,

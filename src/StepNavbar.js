@@ -19,7 +19,6 @@ export const StepNavbar = ({  }) => {
       setStep("two");
     } else {
       console.log("Inside step three");
-
       setStep("three");
     }
     }
