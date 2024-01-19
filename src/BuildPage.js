@@ -74,21 +74,33 @@ export default function BuildPage() {
           },
           {
             name: 'fusion black',
+            imageSrc: DarkOceanSeltos,
+            colorSample: DarkOceanSeltosSample,
           },
           {
             name: 'steel grey',
+            imageSrc: DarkOceanSeltos,
+            colorSample: DarkOceanSeltosSample,
           },
           {
             name: 'gravity grey',
+            imageSrc: DarkOceanSeltos,
+            colorSample: DarkOceanSeltosSample,
           },
           {
             name: 'neptune blue',
+            imageSrc: DarkOceanSeltos,
+            colorSample: DarkOceanSeltosSample,
           },
           {
             name: 'lunar orange',
+            imageSrc: DarkOceanSeltos,
+            colorSample: DarkOceanSeltosSample,
           },
           {
             name: 'valais green',
+            imageSrc: DarkOceanSeltos,
+            colorSample: DarkOceanSeltosSample,
           },
           {
             name: 'dark ocean blue',
@@ -97,6 +109,8 @@ export default function BuildPage() {
           },
           {
             name: 'pluton blue',
+            imageSrc: DarkOceanSeltos,
+            colorSample: DarkOceanSeltosSample,
           }
         ]
       },
