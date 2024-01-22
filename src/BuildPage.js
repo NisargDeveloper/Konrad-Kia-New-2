@@ -234,6 +234,43 @@ export default function BuildPage() {
         modelYear: 2024,
         name: 'Niro Ev',
         price: 48483,
+        color: [
+          {
+            name: 'snow white pearl',
+            carImage: '',
+            sample: ''
+          },
+          {
+            name: 'fusion black',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'steel grey',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'runway red',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'interstellar grey',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'mineral blue',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'cityscape green',
+            carImage: '',
+            sample: '',
+          }
+        ]
       },
       {
         id: 8,
@@ -241,6 +278,28 @@ export default function BuildPage() {
         modelYear: 2024,
         name: 'Telluride',
         price: 53083,
+        color: [
+          {
+            name: 'snow white pearl',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'fusion black',
+            carImage: '',
+            sample: ''
+          },
+          {
+            name: 'gravity grey',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'dark moss',
+            carImage: '',
+            sample: '',
+          },
+        ]
       },
       {
         id: 9,

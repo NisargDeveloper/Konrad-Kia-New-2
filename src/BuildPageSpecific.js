@@ -68,6 +68,34 @@ import snowWhitePealCarnival from './assets/2024 Carnival/colors/Snow-White-Pear
 import thunderGreyCarnival from './assets/2024 Carnival/colors/Thunder-Grey.jpg';
 import thunderGrey from './assets/2024 Carnival/color-sample/Thunder-Grey.jpg'
 
+// Niro Ev
+
+import auroraBlackPearlNiro from './assets/2024 Niro Ev/colors/aurora-black-pearl.jpg';
+import cityscapeNiro from './assets/2024 Niro Ev/colors/cityscape-green.jpg';
+import interstellarGreyNiro from './assets/2024 Niro Ev/colors/interstellar-grey.jpg';
+import mineralBlueNiro from './assets/2024 Niro Ev/colors/mineral-blue.jpg';
+import runwayRedNiro from './assets/2024 Niro Ev/colors/runway-red.jpg';
+import snowWhitePearlNiro from './assets/2024 Niro Ev/colors/snow-white-pearl.jpg';
+import steelGreyNiro from './assets/2024 Niro Ev/colors/steel-grey.jpg';
+
+// Niro Sample
+
+import cityScapeGreenNiroSample from './assets/2024 Niro Ev/color-sample/cityscape-green.jpg';
+import interstellarGreyNiroSample from './assets/2024 Niro Ev/color-sample/interstellar-grey.jpg';
+import mineralBlueNiroSample from './assets/2024 Niro Ev/color-sample/mineral-blue.jpg';
+import runwayRedNiroSample from './assets/2024 Niro Ev/color-sample/runway-red.jpg';
+
+// Telluride
+
+import darkMossTelluride from './assets/2024 Telluride/colors/Dark-Moss.jpg';
+import ebonyBlackTelluride from './assets/2024 Telluride/colors/Ebony-Black.jpg';
+import glacialWhitePearlTelluride from './assets/2024 Telluride/colors/Glacial-White-Pearl.jpg';
+import gravityGreyTelluride from './assets/2024 Telluride/colors/Gravity-Grey.jpg';
+import darkMossTellurideSample from './assets/2024 Telluride/color-sample/Dark-Moss.jpg';
+
+
+
+
 import './BuildPage.css'
 import  Footer  from "./Footer";
 export const BuildPageSpecific = () => {
@@ -180,6 +208,23 @@ export const BuildPageSpecific = () => {
     {selectedOption === "snow white pearl" && carName === "Carnival"&& <img src={snowWhitePealCarnival} />}
     {selectedOption === "thunder grey" && carName === "Carnival"&& <img src={thunderGreyCarnival} />}
 
+    {/* Niro Ev */}
+
+    {selectedOption === "fusion black" && carName === "Niro Ev"&& <img src={auroraBlackPearlNiro} />}
+    {selectedOption === "cityscape green" && carName === "Niro Ev"&& <img src={cityscapeNiro} />}
+    {selectedOption === "interstellar grey" && carName === "Niro Ev"&& <img src={interstellarGreyNiro} />}
+    {selectedOption === "mineral blue" && carName === "Niro Ev"&& <img src={mineralBlueNiro} />}
+    {selectedOption === "runway red" && carName === "Niro Ev"&& <img src={runwayRedNiro} />}
+    {selectedOption === "snow white pearl" && carName === "Niro Ev"&& <img src={snowWhitePearlNiro} />}
+    {selectedOption === "steel grey" && carName === "Niro Ev"&& <img src={steelGreyNiro} />}
+
+{/* Telluride */}
+
+    {selectedOption === "snow white pearl" && carName === "Telluride"&& <img src={glacialWhitePearlTelluride} />}
+    {selectedOption === "gravity grey" && carName === "Telluride"&& <img src={gravityGreyTelluride} />}
+    {selectedOption === "fusion black" && carName === "Telluride"&& <img src={ebonyBlackTelluride} />}
+    {selectedOption === "dark moss" && carName === "Telluride"&& <img src={darkMossTelluride} />}
+
     </div>
     <div className='kia-div' style={{marginTop: '40px'}}>
       <h1 style={{paddingLeft: '25px', fontSize: '40px'}}>{cars.name}</h1>
@@ -249,6 +294,12 @@ export const BuildPageSpecific = () => {
         {selectedOption === 'vesta blue' && <img src={VestaBlue} alt='Vesta Blue' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
         {selectedOption === 'hyper blue' && <img src={HyperBlue} alt='hyper blue' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
         {selectedOption === 'thunder grey' && <img src={thunderGrey} alt='thunder grey' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'cityscape green' && <img src={cityScapeGreenNiroSample} alt='cityscape green' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'interstellar grey' && <img src={interstellarGreyNiroSample} alt='interstellar grey' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'mineral blue' && <img src={mineralBlueNiroSample} alt='mineral blue' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+    {selectedOption === "fusion black" && carName === "Niro Ev"&& <img src={auroraBlackPearlNiro} />}
+        {selectedOption === 'runway red' && <img src={runwayRedNiroSample} alt='runway red' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'dark moss' && <img src={darkMossTellurideSample} alt='dark moss' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
         
         {selectedOption === 'panthera' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Panthera Metal</p>}
         {selectedOption === 'steel grey' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Steel Grey</p>}
@@ -264,6 +315,11 @@ export const BuildPageSpecific = () => {
         {selectedOption === 'dawning red' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Dawning Red</p>}
         {selectedOption === 'hyper blue' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Hyper Blue</p>}
         {selectedOption === 'thunder grey' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Thunder Grey</p>}
+        {selectedOption === 'cityscape green' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Cityscape Green</p>}
+        {selectedOption === 'interstellar grey' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Interstellar Grey</p>}
+        {selectedOption === 'mineral blue' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Mineral Blue</p>}
+        {selectedOption === 'runway red' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Runway Red</p>}
+        {selectedOption === 'dark moss' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Dark Moss</p>}
         <div className='colorSelection'>
         {cars.color.map((color, index) => (
             <button className = {color.name} key={index} onClick={ () => setSelectedOption(color.name)}></button>
