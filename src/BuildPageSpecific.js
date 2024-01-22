@@ -18,6 +18,8 @@ import CarnivalTwo from './assets/Carnival.jpg';
 import NiroEvTwo from './assets/Niro Ev two.jpg';
 import TellurideTwo from './assets/Telluride.jpg';
 import StingerTwo from './assets/Stinger.jpg';
+import VestaBlue from "./assets/2024 Sportage/color-sample/vesta-blue.jpg";
+import DawningRed from "./assets/2024 Sportage/color-sample/dawning-red.jpg";
 import FusionBlackSample from './assets/2024 Seltos/color-sample/Fusion Black.jpg';
 import GravityGreySample from './assets/2024 Seltos/color-sample/gravity-grey.jpg';
 import SnowWhitePearlSample from './assets/2024 Seltos/color-sample/snow-white-pearl.jpg';
@@ -37,6 +39,35 @@ import SnowWhitePearl from './assets/2024 Seltos/colors/Snow-White-Pearl.jpg';
 import SteelGrey from './assets/2024 Seltos/colors/Steel-Grey.jpg';
 import ValaisGreen from './assets/2024 Seltos/colors/Valais-Green.jpg';
 
+// Forte
+
+import gravityGreyForte from './assets/2024 forte/colors/gravity-grey.jpg';
+import hyperBlueForte from './assets/2024 forte/colors/hyper-blue.jpg';
+import snowWhiteForte from './assets/2024 forte/colors/snow-white-pearl.jpg';
+import steelGreyForte from './assets/2024 forte/colors/steel-grey.jpg';
+
+// Sportage Imports
+import dawningRedSportage from './assets/2024 Sportage/colors/dawning-red.jpg';
+import fusionBlackSportage from './assets/2024 Sportage/colors/fusion-black.jpg';
+import glacialWhitePearlSportage from './assets/2024 Sportage/colors/glacial-white-pearl.jpg';
+import gravityGreySportage from './assets/2024 Sportage/colors/gravity-grey.jpg';
+import steellGreySportage from './assets/2024 Sportage/colors/steel-grey.jpg';
+import vestaBlueSportage from './assets/2024 Sportage/colors/vesta-blue.jpg';
+import HyperBlue from './assets/2024 forte/color-sample/hyper-blue.jpg';
+
+// Sorento
+
+import ebonyBlackSorento from './assets/2024 Sorento/colors/Ebony-Black.jpg';
+import glacialWhitePearl from './assets/2024 Sorento/colors/Glacial-White-Pearl.jpg';
+import gravityGreySorento from './assets/2024 Sorento/colors/Gravity-Grey.jpg';
+
+// Carnival
+
+import auroraBlackCarnival from './assets/2024 Carnival/colors/Aurora-Black.jpg';
+import snowWhitePealCarnival from './assets/2024 Carnival/colors/Snow-White-Pearl.jpg';
+import thunderGreyCarnival from './assets/2024 Carnival/colors/Thunder-Grey.jpg';
+import thunderGrey from './assets/2024 Carnival/color-sample/Thunder-Grey.jpg'
+
 import './BuildPage.css'
 import  Footer  from "./Footer";
 export const BuildPageSpecific = () => {
@@ -44,7 +75,8 @@ export const BuildPageSpecific = () => {
   const isBuildCar = location.pathname.includes("/BuildCar");
   const [imageSource, setImageSource] = useState('');
   const cars = location.state;
-  const [selectedOption, setSelectedOption] = useState("snowWhite");
+  const [selectedOption, setSelectedOption] = useState("snow white pearl");
+  const [carName, setCarName] = useState('');
   const [carsColorLength, setCarsColorLength] = useState('0');
   const navigate = useNavigate();
   console.log(cars)
@@ -52,25 +84,43 @@ export const BuildPageSpecific = () => {
   console.log("The selected Name is " + selectedOption);
   useEffect(() => {
     if(cars.name === 'Forte') {
-      setImageSource(ForteInterior)
+      setImageSource(ForteInterior);
+      setCarName(cars.name);
+      console.log(cars.color.gravityGrey);
     } else if(cars.name === 'Seltos'){
       setImageSource(SeltosInterior);
       setCarsColorLength(cars.color.length);
+      setCarName(cars.name);
+
     }
      else if(cars.name === 'Sportage') {
       setImageSource(SportageTwo);
+      setCarName(cars.name);
+
     } else if(cars.name === 'Sorento') {
       setImageSource(SorentoTwo);
+      setCarName(cars.name);
+
     } else if(cars.name === 'Carnival') {
       setImageSource(CarnivalTwo);
+      setCarName(cars.name);
+
     }else if(cars.name === 'Niro Ev') {
       setImageSource(NiroEvTwo);
+      setCarName(cars.name);
+
     }else if(cars.name === 'Telluride') {
       setImageSource(TellurideTwo);
+      setCarName(cars.name);
+
     }else if(cars.name === 'Stinger') {
       setImageSource(StingerTwo);
+      setCarName(cars.name);
+
     }else if(cars.name === 'EV9') {
       setImageSource(EV9Exterior);
+      setCarName(cars.name);
+
     }
   }, [cars])
 
@@ -91,15 +141,45 @@ export const BuildPageSpecific = () => {
     <StepNavbar sendDataToParent={receiveDataFromChild}/>
     <div className='build-container'>
     <div className='img-container'>
-    {selectedOption === "pluton blue" && <img src={PlutonBlue}/>}
-    {selectedOption === "dark ocean blue" && <img src={DarkOceanBlue}/>}
-    {selectedOption === "gravity grey" && <img src={GravityGrey} />}
-    {selectedOption === "lunar orange" && <img src={LunarOrange} />}
-    {selectedOption === "neptune blue" && <img src={NeptuneBlue} />}
-    {selectedOption === "snow white pearl" && <img src={SnowWhitePearl} />}
-    {selectedOption === "steel grey" && <img src={SteelGrey} />}
-    {selectedOption === "valais green" && <img src={ValaisGreen} />}
-    {selectedOption === "fusion black" && <img src={FusionBlack} />}
+    {selectedOption === "pluton blue" && carName === "Seltos" && <img src={PlutonBlue}/>}
+    {selectedOption === "dark ocean blue" && carName === "Seltos" && <img src={DarkOceanBlue}/>}
+    {selectedOption === "gravity grey" && carName === "Seltos"&& <img src={GravityGrey} />}
+    {selectedOption === "lunar orange" && carName === "Seltos"&& <img src={LunarOrange} />}
+    {selectedOption === "neptune blue" && carName === "Seltos"&& <img src={NeptuneBlue} />}
+    {selectedOption === "snow white pearl" && carName === "Seltos"&& <img src={SnowWhitePearl} />}
+    {selectedOption === "steel grey" && carName === "Seltos"&& <img src={SteelGrey} />}
+    {selectedOption === "valais green" && carName === "Seltos"&& <img src={ValaisGreen} />}
+    {selectedOption === "fusion black" && carName === "Seltos"&& <img src={FusionBlack} />}
+
+    {/* Forte colors */}
+
+    {selectedOption === "gravity grey" && carName === "Forte"&& <img src={gravityGreyForte} />}
+    {selectedOption === "hyper blue" && carName === "Forte"&& <img src={hyperBlueForte} />}
+    {selectedOption === "snow white pearl" && carName === "Forte"&& <img src={snowWhiteForte} />}
+    {selectedOption === "steel grey" && carName === "Forte"&& <img src={steelGreyForte} />}
+
+    {/* Sportage colors */}
+
+    {selectedOption === "dawning red" && carName === "Sportage"&& <img src={dawningRedSportage} />}
+    {selectedOption === "fusion black" && carName === "Sportage"&& <img src={fusionBlackSportage} />}
+    {selectedOption === "snow white pearl" && carName === "Sportage"&& <img src={glacialWhitePearlSportage} />}
+    {selectedOption === "gravity grey" && carName === "Sportage"&& <img src={gravityGreySportage} />}
+    {selectedOption === "steel grey" && carName === "Sportage"&& <img src={steellGreySportage} />}
+    {selectedOption === "vesta blue" && carName === "Sportage"&& <img src={vestaBlueSportage} />}
+
+    {/* Sorento  */}
+
+    {selectedOption === "fusion black" && carName === "Sorento"&& <img src={ebonyBlackSorento} />}
+    {selectedOption === "snow white pearl" && carName === "Sorento"&& <img src={glacialWhitePearl} />}
+    {selectedOption === "gravity grey" && carName === "Sorento"&& <img src={gravityGreySorento} />}
+
+    {/* Carnival */}
+
+
+    {selectedOption === "fusion black" && carName === "Carnival"&& <img src={auroraBlackCarnival} />}
+    {selectedOption === "snow white pearl" && carName === "Carnival"&& <img src={snowWhitePealCarnival} />}
+    {selectedOption === "thunder grey" && carName === "Carnival"&& <img src={thunderGreyCarnival} />}
+
     </div>
     <div className='kia-div' style={{marginTop: '40px'}}>
       <h1 style={{paddingLeft: '25px', fontSize: '40px'}}>{cars.name}</h1>
@@ -157,14 +237,18 @@ export const BuildPageSpecific = () => {
         {selectedOption === 'panthera' && <img src={PantheraInterior} alt='Panthera Interior' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
         {selectedOption === 'aurora' && <img src={AuroraInterior} alt='Aurora Interior' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
         {selectedOption === 'fusion black' && <img src={FusionBlackSample} alt='Fusion Black' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
-        {selectedOption === 'gravity grey' && <img src={GravityGreySample} alt='Fusion Black' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
-        {selectedOption === 'snow white pearl' && <img src={SnowWhitePearlSample} alt='Fusion Black' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
-        {selectedOption === 'neptune blue' && <img src={NeptuneBlueSample} alt='Fusion Black' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
-        {selectedOption === 'steel grey' && <img src={SteelGreySample} alt='Fusion Black' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
-        {selectedOption === 'lunar orange' && <img src={LunarOrangeSample} alt='Fusion Black' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
-        {selectedOption === 'valais green' && <img src={ValaisGreenSample} alt='Fusion Black' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
-        {selectedOption === 'dark ocean blue' && <img src={DarkOceanSample} alt='Fusion Black' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
-        {selectedOption === 'pluton blue' && <img src={PlutonBlueSample} alt='Fusion Black' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'gravity grey' && <img src={GravityGreySample} alt='gravity grey' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'snow white pearl' && <img src={SnowWhitePearlSample} alt='snow white pearl' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'neptune blue' && <img src={NeptuneBlueSample} alt='neptune blue' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'steel grey' && <img src={SteelGreySample} alt='steel grey' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'lunar orange' && <img src={LunarOrangeSample} alt='lunar orange' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'valais green' && <img src={ValaisGreenSample} alt='valais green' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'dark ocean blue' && <img src={DarkOceanSample} alt='dark ocean blue' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'pluton blue' && <img src={PlutonBlueSample} alt='pluton blue' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'dawning red' && <img src={DawningRed} alt='dawning red' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'vesta blue' && <img src={VestaBlue} alt='Vesta Blue' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'hyper blue' && <img src={HyperBlue} alt='hyper blue' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
+        {selectedOption === 'thunder grey' && <img src={thunderGrey} alt='thunder grey' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', marginTop: '15px'}}/>}
         
         {selectedOption === 'panthera' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Panthera Metal</p>}
         {selectedOption === 'steel grey' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Steel Grey</p>}
@@ -176,13 +260,15 @@ export const BuildPageSpecific = () => {
         {selectedOption === "valais green" && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Valais Green</p>}
         {selectedOption === "dark ocean blue" && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Dark Ocean Blue</p>}
         {selectedOption === "pluton blue" && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Pluton Blue</p>}
+        {selectedOption === 'vesta blue' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Vesta Blue</p>}
+        {selectedOption === 'dawning red' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Dawning Red</p>}
+        {selectedOption === 'hyper blue' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Hyper Blue</p>}
+        {selectedOption === 'thunder grey' && <p style={{fontSize: '30px', marginTop: '10px', marginLeft: '20px'}}>Thunder Grey</p>}
         <div className='colorSelection'>
         {cars.color.map((color, index) => (
             <button className = {color.name} key={index} onClick={ () => setSelectedOption(color.name)}></button>
           ))}
-          {/* <button className='white' onClick={() => setSelectedOption("snowWhite")}></button>
-          <button className='metal' onClick={() => setSelectedOption("panthera")}></button>
-          <button className='black' onClick={() => setSelectedOption("aurora")}></button> */}
+        
         </div>
       </div>
       <h1 style={{display: 'flex', alignItems: 'center', paddingLeft: '25px', marginTop: '15px'}}><span style={{border: '1px solid black', borderRadius: '50%', fontSize: '30px', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '10px', fontWeight: '300'}}>3</span>Choose your Interior</h1>

@@ -10,11 +10,16 @@ import Carnival from './assets/carnival.png'
 import Niro from './assets/niro-ev.png'
 import Telluride from './assets/Telluride.png'
 import Stinger from './assets/stinger-side.png';
-
+import gravityGrey from './assets/2024 forte/colors/gravity-grey.jpg';
+import hyperBlue from './assets/2024 forte/colors/hyper-blue.jpg';
+import snowWhite from './assets/2024 forte/colors/snow-white-pearl.jpg';
+import steelGrey from './assets/2024 forte/colors/steel-grey.jpg';
+import steelGreySample from './assets/2024 forte/color-sample/steel-grey.jpg';
+import gravityGreySample from './assets/2024 forte/color-sample/gravity-grey.jpg';
+import hyperBlueSample from './assets/2024 forte/color-sample/hyper-blue.jpg';
+import snowWhiteSample from './assets/2024 forte/color-sample/snow-white-pearl.jpg';
 import DarkOceanSeltos from './assets/2024 Seltos/colors/Dark-Ocean-Blue.jpg';
 import DarkOceanSeltosSample from './assets/2024 Seltos/color-sample/ocean-dark-blue.jpg';
-
-
 import { FaChevronRight } from "react-icons/fa";
 import { StepNavbar } from "./StepNavbar";
 import { Link, useNavigate } from "react-router-dom";
@@ -59,6 +64,28 @@ export default function BuildPage() {
         modelYear: 2024,
         name: 'Forte',
         price: 23483,
+        color: [
+          {
+            name: 'gravity grey',
+            carImage: gravityGrey,
+            sample: gravityGreySample,
+          },
+          {
+            name: 'hyper blue',
+            carImage: hyperBlue,
+            sample: hyperBlueSample,
+          },
+          {
+            name: 'snow white pearl',
+            carImage: snowWhite,
+            sample: snowWhiteSample,
+          },
+          {
+            name: 'steel grey',
+            carImage: steelGrey,
+            sample: steelGreySample,
+          }
+        ]
       },
       {
         id: 3,
@@ -120,6 +147,38 @@ export default function BuildPage() {
         modelYear: 2024,
         name: 'Sportage',
         price: 32683,
+        color: [
+          {
+            name: 'dawning red',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'fusion black',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'gravity grey',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'snow white pearl',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'steel grey',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'vesta blue',
+            carImage: '',
+            sample: '',
+          }
+        ]
       },
       {
         id: 5,
@@ -127,13 +186,47 @@ export default function BuildPage() {
         modelYear: 2023,
         name: 'Sorento',
         price: 39483,
+        color: [
+          {
+            name: 'fusion black',
+            carImage: '',
+            sample: '',
+          }, 
+          {
+            name: 'snow white pearl',
+            carImage: '',
+            sample: '',
+          },
+          {
+            name: 'gravity grey',
+            carImage: '',
+            sample: '',
+          },
+        ]
       },
       {
         id: 6,
         imageSrc: {Carnival}.Carnival,
         modelYear: 2024,
         name: 'Carnival',
-        price: 39183
+        price: 39183,
+        color: [
+          {
+            name: 'fusion black',
+            carImage: '',
+            sample:''
+          },
+          {
+            name: 'snow white pearl',
+            carImage: '',
+            sample: ''
+          },
+          {
+            name: 'thunder grey',
+            carImage: '',
+            sample: ''
+          },
+        ]
       },
       {
         id: 7,
@@ -158,7 +251,6 @@ export default function BuildPage() {
       },
     ];
 
-  
   return (
     <>
     <p style={{color: "white", background: "black", textAlign: "center"}}>This is just for a testing. Not all functionalities are developed. Please click on Build</p>
@@ -176,8 +268,6 @@ export default function BuildPage() {
          <div
          key={index}
          className={`car-build-container ${hoveredIndex === index ? 'hovered' : ''}`}
-        //  onMouseEnter={() => handleMouseEnter(index)}
-        //  onMouseLeave={handleMouseLeave}
          >
           <img src={cars.imageSrc} style={{width:'200px', height: '100px', objectFit:'cover'}}/>
           <p>{cars.modelYear}</p>

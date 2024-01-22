@@ -481,5 +481,16 @@ button {
 }
 .pluton {
   background-color:rgb(81, 115, 124) ;
-
+}
+.dawning {
+  background-color: rgb(155, 27, 32);
+}
+.vesta {
+  background-color: rgb(67, 89, 111);
+}
+.hyper {
+  background-color: rgb(6, 65, 135);
+}
+.thunder {
+  background-color: rgb(97, 97, 97);
 }
