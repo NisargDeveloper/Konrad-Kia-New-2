@@ -7,19 +7,9 @@ import Seltos from './assets/seltos.png'
 import Sportage from './assets/sportage.png'
 import Sorento from './assets/sorento.png'
 import Carnival from './assets/carnival.png'
-import Niro from './assets/niro-ev.png'
+import Niro from './assets/niro-ev.png';
 import Telluride from './assets/Telluride.png'
 import Stinger from './assets/stinger-side.png';
-import gravityGrey from './assets/2024 forte/colors/gravity-grey.jpg';
-import hyperBlue from './assets/2024 forte/colors/hyper-blue.jpg';
-import snowWhite from './assets/2024 forte/colors/snow-white-pearl.jpg';
-import steelGrey from './assets/2024 forte/colors/steel-grey.jpg';
-import steelGreySample from './assets/2024 forte/color-sample/steel-grey.jpg';
-import gravityGreySample from './assets/2024 forte/color-sample/gravity-grey.jpg';
-import hyperBlueSample from './assets/2024 forte/color-sample/hyper-blue.jpg';
-import snowWhiteSample from './assets/2024 forte/color-sample/snow-white-pearl.jpg';
-import DarkOceanSeltos from './assets/2024 Seltos/colors/Dark-Ocean-Blue.jpg';
-import DarkOceanSeltosSample from './assets/2024 Seltos/color-sample/ocean-dark-blue.jpg';
 import { FaChevronRight } from "react-icons/fa";
 import { StepNavbar } from "./StepNavbar";
 import { Link, useNavigate } from "react-router-dom";
@@ -57,6 +47,11 @@ export default function BuildPage() {
         modelYear: 2024,
         name: 'EV9',
         price: 63183,
+        color: [
+          {
+            name: 'snow white pearl',
+          }
+        ]
       },
       {
         id: 2,
@@ -67,23 +62,23 @@ export default function BuildPage() {
         color: [
           {
             name: 'gravity grey',
-            carImage: gravityGrey,
-            sample: gravityGreySample,
+            carImage: '',
+            sample: '',
           },
           {
             name: 'hyper blue',
-            carImage: hyperBlue,
-            sample: hyperBlueSample,
+            carImage: '',
+            sample: '',
           },
           {
             name: 'snow white pearl',
-            carImage: snowWhite,
-            sample: snowWhiteSample,
+            carImage: '',
+            sample: '',
           },
           {
             name: 'steel grey',
-            carImage: steelGrey,
-            sample: steelGreySample,
+            carImage: '',
+            sample: '',
           }
         ]
       },
@@ -101,43 +96,43 @@ export default function BuildPage() {
           },
           {
             name: 'fusion black',
-            imageSrc: DarkOceanSeltos,
-            colorSample: DarkOceanSeltosSample,
+            imageSrc: '',
+            colorSample: '',
           },
           {
             name: 'steel grey',
-            imageSrc: DarkOceanSeltos,
-            colorSample: DarkOceanSeltosSample,
+            imageSrc: '',
+            colorSample: '',
           },
           {
             name: 'gravity grey',
-            imageSrc: DarkOceanSeltos,
-            colorSample: DarkOceanSeltosSample,
+            imageSrc: '',
+            colorSample: '',
           },
           {
             name: 'neptune blue',
-            imageSrc: DarkOceanSeltos,
-            colorSample: DarkOceanSeltosSample,
+            imageSrc: '',
+            colorSample: '',
           },
           {
             name: 'lunar orange',
-            imageSrc: DarkOceanSeltos,
-            colorSample: DarkOceanSeltosSample,
+            imageSrc: '',
+            colorSample: '',
           },
           {
             name: 'valais green',
-            imageSrc: DarkOceanSeltos,
-            colorSample: DarkOceanSeltosSample,
+            imageSrc: '',
+            colorSample: '',
           },
           {
             name: 'dark ocean blue',
-            imageSrc: DarkOceanSeltos,
-            colorSample: DarkOceanSeltosSample,
+            imageSrc: '',
+            colorSample: '',
           },
           {
             name: 'pluton blue',
-            imageSrc: DarkOceanSeltos,
-            colorSample: DarkOceanSeltosSample,
+            imageSrc: '',
+            colorSample: '',
           }
         ]
       },
@@ -300,14 +295,7 @@ export default function BuildPage() {
             sample: '',
           },
         ]
-      },
-      {
-        id: 9,
-        imageSrc: {Stinger}.Stinger,
-        modelYear: 2023,
-        name: 'Stinger',
-        price: 54683,
-      },
+      }
     ];
 
   return (

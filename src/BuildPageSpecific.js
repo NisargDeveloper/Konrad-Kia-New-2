@@ -2,22 +2,10 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { StepNavbar } from './StepNavbar'
 import { useLocation, useNavigate } from 'react-router-dom'
-import EV9Exterior from './assets/EV9 Exterior.jpg'
-import PantheraColor from './assets/Panthera-metal.jpg'
-import AuroraBlackColor from './assets/Aurora-black-pearl.jpg'
 import PantheraInterior from './assets/Panthera-metal Interior.jpg'
-import SnowWhiteInterior from './assets/Snow-white-pearl Interior.jpg'
 import AuroraInterior from './assets/Aurora-black-pearl Interior.jpg'
 import SeatInterior from './assets/Seat Interior.jpg';
-import ForteInterior from './assets/aurora-black.jpg';
-import SeltosInterior from './assets/Seltos-two.jpg';
 import FusionBlack from './assets/2024 Seltos/colors/Fusion-Black.jpg';
-import SportageTwo from './assets/dawning-red.jpg';
-import SorentoTwo from './assets/Ebony-Black.jpg';
-import CarnivalTwo from './assets/Carnival.jpg';
-import NiroEvTwo from './assets/Niro Ev two.jpg';
-import TellurideTwo from './assets/Telluride.jpg';
-import StingerTwo from './assets/Stinger.jpg';
 import VestaBlue from "./assets/2024 Sportage/color-sample/vesta-blue.jpg";
 import DawningRed from "./assets/2024 Sportage/color-sample/dawning-red.jpg";
 import FusionBlackSample from './assets/2024 Seltos/color-sample/Fusion Black.jpg';
@@ -39,8 +27,11 @@ import SnowWhitePearl from './assets/2024 Seltos/colors/Snow-White-Pearl.jpg';
 import SteelGrey from './assets/2024 Seltos/colors/Steel-Grey.jpg';
 import ValaisGreen from './assets/2024 Seltos/colors/Valais-Green.jpg';
 
-// Forte
+// Ev
 
+import snowWhitePearlEV from './assets/2024 EV/colors/EV9 Exterior.jpg';
+
+// Forte
 import gravityGreyForte from './assets/2024 forte/colors/gravity-grey.jpg';
 import hyperBlueForte from './assets/2024 forte/colors/hyper-blue.jpg';
 import snowWhiteForte from './assets/2024 forte/colors/snow-white-pearl.jpg';
@@ -56,20 +47,17 @@ import vestaBlueSportage from './assets/2024 Sportage/colors/vesta-blue.jpg';
 import HyperBlue from './assets/2024 forte/color-sample/hyper-blue.jpg';
 
 // Sorento
-
 import ebonyBlackSorento from './assets/2024 Sorento/colors/Ebony-Black.jpg';
 import glacialWhitePearl from './assets/2024 Sorento/colors/Glacial-White-Pearl.jpg';
 import gravityGreySorento from './assets/2024 Sorento/colors/Gravity-Grey.jpg';
 
 // Carnival
-
 import auroraBlackCarnival from './assets/2024 Carnival/colors/Aurora-Black.jpg';
 import snowWhitePealCarnival from './assets/2024 Carnival/colors/Snow-White-Pearl.jpg';
 import thunderGreyCarnival from './assets/2024 Carnival/colors/Thunder-Grey.jpg';
 import thunderGrey from './assets/2024 Carnival/color-sample/Thunder-Grey.jpg'
 
 // Niro Ev
-
 import auroraBlackPearlNiro from './assets/2024 Niro Ev/colors/aurora-black-pearl.jpg';
 import cityscapeNiro from './assets/2024 Niro Ev/colors/cityscape-green.jpg';
 import interstellarGreyNiro from './assets/2024 Niro Ev/colors/interstellar-grey.jpg';
@@ -100,56 +88,16 @@ import './BuildPage.css'
 import  Footer  from "./Footer";
 export const BuildPageSpecific = () => {
   const location = useLocation();
-  const isBuildCar = location.pathname.includes("/BuildCar");
-  const [imageSource, setImageSource] = useState('');
   const cars = location.state;
   const [selectedOption, setSelectedOption] = useState("snow white pearl");
   const [carName, setCarName] = useState('');
-  const [carsColorLength, setCarsColorLength] = useState('0');
   const navigate = useNavigate();
   console.log(cars)
   console.log("This is the car state"+ cars.color);
   console.log("The selected Name is " + selectedOption);
   useEffect(() => {
-    if(cars.name === 'Forte') {
-      setImageSource(ForteInterior);
+    console.log(cars.name);
       setCarName(cars.name);
-      console.log(cars.color.gravityGrey);
-    } else if(cars.name === 'Seltos'){
-      setImageSource(SeltosInterior);
-      setCarsColorLength(cars.color.length);
-      setCarName(cars.name);
-
-    }
-     else if(cars.name === 'Sportage') {
-      setImageSource(SportageTwo);
-      setCarName(cars.name);
-
-    } else if(cars.name === 'Sorento') {
-      setImageSource(SorentoTwo);
-      setCarName(cars.name);
-
-    } else if(cars.name === 'Carnival') {
-      setImageSource(CarnivalTwo);
-      setCarName(cars.name);
-
-    }else if(cars.name === 'Niro Ev') {
-      setImageSource(NiroEvTwo);
-      setCarName(cars.name);
-
-    }else if(cars.name === 'Telluride') {
-      setImageSource(TellurideTwo);
-      setCarName(cars.name);
-
-    }else if(cars.name === 'Stinger') {
-      setImageSource(StingerTwo);
-      setCarName(cars.name);
-
-    }else if(cars.name === 'EV9') {
-      setImageSource(EV9Exterior);
-      setCarName(cars.name);
-
-    }
   }, [cars])
 
 
@@ -169,6 +117,7 @@ export const BuildPageSpecific = () => {
     <StepNavbar sendDataToParent={receiveDataFromChild}/>
     <div className='build-container'>
     <div className='img-container'>
+    {selectedOption === "snow white pearl" && carName === "EV9" && <img src={snowWhitePearlEV}/>}
     {selectedOption === "pluton blue" && carName === "Seltos" && <img src={PlutonBlue}/>}
     {selectedOption === "dark ocean blue" && carName === "Seltos" && <img src={DarkOceanBlue}/>}
     {selectedOption === "gravity grey" && carName === "Seltos"&& <img src={GravityGrey} />}

@@ -179,8 +179,8 @@
 }
 .car-build-container {
   cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  opacity: 1;
+  /* transition: opacity 0.3s ease; */
 }
 
 .car-build-container.hovered {
